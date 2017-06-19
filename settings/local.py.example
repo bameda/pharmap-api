@@ -1,0 +1,4 @@
+from .common import settings
+
+#settings["DEBUG"] = True
+#settings["DATABASE"]["URL"] = "postgresql://username@password/host/dbname"

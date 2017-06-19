@@ -1,4 +1,10 @@
 from apistar import App
-from pharmap.routes import routes
+from apistar.commands import create_tables
 
-app = App(routes=routes)
+from pharmap.routes import routes
+from settings import settings
+
+from pharmap.storage.models import *     # noop
+
+
+app = App(routes=routes, settings=settings, commands=[create_tables])
