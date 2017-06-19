@@ -1,1 +1,1 @@
-from .entities import *     # noop
+from .entities import *     # noqa
