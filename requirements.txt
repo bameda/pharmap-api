@@ -1,6 +1,7 @@
 arrow==0.10.0
 apistar==0.1.17
-GeoAlchemy2==0.4.0
+dateparser==0.6.0
+Faker==0.7.17
 psycopg2==2.7.1
 sqlalchemy==1.1.10
 ujson==1.35

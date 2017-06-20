@@ -6,7 +6,6 @@
 - Python 3.6
 - Python VirtualEnv Wrapper
 - PostgreSQL 9.6
-- PostGIS 2.3 (you neded to create a db template 'template_postgis')
 
 
 ## Setup
@@ -18,8 +17,9 @@
     ```
 2. Create the database
     ```
-    createdb -T template_postgis pharmap
+    createdb pharmap
     apistar create_tables
+    apistar sample_data  # Optional: To populate the db with sample data
     ```
 3. Run the Api
     ```

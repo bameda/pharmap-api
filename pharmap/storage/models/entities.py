@@ -1,11 +1,13 @@
 import arrow
 import uuid
 
-from geoalchemy2 import Geometry
-from sqlalchemy import Boolean, Column, DateTime, Text
+from sqlalchemy import Boolean, Column, DateTime, Float, Text
 from sqlalchemy.dialects.postgresql import UUID
 
 from pharmap.storage import database
+
+
+now = lambda: arrow.utcnow().datetime
 
 
 class Entity(database.Base):
@@ -17,12 +19,13 @@ class Entity(database.Base):
     description = Column(Text, nullable=True)
     is_active = Column(Boolean, nullable=False, default=True)
 
-    point = Column(Geometry("POINT"), nullable=False)
+    longitude = Column(Float, nullable=False)
+    latitude = Column(Float, nullable=False)
 
     created_datetime = Column(DateTime(timezone=True), nullable=False,
-                              default=arrow.utcnow)
+                              default=now)
     updated_datetime = Column(DateTime(timezone=True), nullable=False,
-                              default=arrow.utcnow, onupdate=arrow.utcnow)
+                              default=now, onupdate=now)
 
 
 __all__ = [
