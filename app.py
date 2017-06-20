@@ -3,7 +3,7 @@ from apistar.commands import create_tables
 
 from pharmap.storage.models import *     # noqa
 from pharmap.routes import routes
-from settings import settings
+from pharmap.settings import settings
 
 
 

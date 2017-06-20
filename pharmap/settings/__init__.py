@@ -1,9 +1,8 @@
 import sys
 
 try:
-    from .local import settings # noqa
+    from pharmap.settings.local import settings # noqa
     print ("Using 'local' settings...")
 except ImportError:
-    from .common import settings # noqa
+    from pharmap.settings.common import settings # noqa
     print ("Using 'common' settings...")
-

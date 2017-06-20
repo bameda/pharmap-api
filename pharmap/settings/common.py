@@ -1,4 +1,4 @@
-from settings.environments import env
+from pharmap.settings.environments import env
 from pharmap.storage import database
 
 settings = {

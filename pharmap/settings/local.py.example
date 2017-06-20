@@ -1,4 +1,4 @@
-from .common import settings
+from pharmap.settings.common import settings
 
 #settings["DEBUG"] = True
 #settings["DATABASE"]["URL"] = "postgresql://username@password/host/dbname"
