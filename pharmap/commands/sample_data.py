@@ -7,6 +7,7 @@ TOTAL_ENTRIES = 40
 
 fake = Faker()
 
+
 def _create_entity(db_session):
     repository.create_entity(
         db_session=db_session,
