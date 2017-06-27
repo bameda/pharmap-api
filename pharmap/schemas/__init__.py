@@ -1,1 +1,1 @@
-from pharmap.schemas.entities import *
+from pharmap.schemas.entities import *  # noqa

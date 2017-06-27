@@ -7,7 +7,7 @@ from sqlalchemy.dialects.postgresql import UUID
 from pharmap.storage import database
 
 
-now = lambda: arrow.utcnow().datetime
+now = lambda: arrow.utcnow().datetime   # noqa
 
 
 class Entity(database.Base):

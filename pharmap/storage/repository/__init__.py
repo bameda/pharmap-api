@@ -1,1 +1,1 @@
-from pharmap.storage.repository.entities import *
+from pharmap.storage.repository.entities import *   # noqa

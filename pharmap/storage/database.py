@@ -5,8 +5,10 @@ Base = declarative_base()
 
 _db = None
 
+
 @property
 def db():
+    global _db
     if not _db:
         from apistar.main import get_current_app
         from apistar.backends import SQLAlchemy

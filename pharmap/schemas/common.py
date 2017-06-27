@@ -5,16 +5,6 @@ import dateparser
 from datetime import datetime
 
 
-class Latitude(schema.Number):
-    minimum = - 85.0511
-    maximum = 85.0511
-
-
-class Longitude(schema.Number):
-    minimum = -180
-    maximum = 180
-
-
 class DateTime(datetime):
     native_type = datetime
     errors = {
@@ -33,10 +23,10 @@ class DateTime(datetime):
             return value
         elif isinstance(value, str):
             try:
-                return  dateparser.parse(value, settings={'TIMEZONE': 'UTC'})
+                return dateparser.parse(value, settings={'TIMEZONE': 'UTC'})
             except KeyError:
                 raise SchemaError(schema.error_message(cls, 'type'))
-        elif isinstance(value, arrow.Arrow):
+        elif isinstance(value, Arrow):
             return value.datetime
 
         raise SchemaError(schema.error_message(cls, 'type'))
